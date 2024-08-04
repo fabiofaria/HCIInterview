@@ -8,11 +8,11 @@ function PatientVisitInformation({ visitInformation }: PatientVisitInformationPr
     return (
         <div className="flex flex-col border rounded p-2 shadow">
                     <div className="text-gray-900 font-bold text-xl mb-2">{visitInformation.patientName}</div>
-                    <div className="">
+                    <div>
                         <span className="font-bold">Hospital: </span>
                         <span>{visitInformation.hospitalName}</span>
                     </div>
-                    <div className="">
+                    <div>
                         <span className="font-bold">Visit: </span>
                         <span>{visitInformation.visitDate.toLocaleString()}</span>
                     </div>

@@ -21,6 +21,7 @@ public class PatientsRepository : IPatientsRepository
             .Include(t=> t.PatientHospitals)!
                 .ThenInclude(t=> t.Visit)
             .Where(t => t.Email.Equals(email, StringComparison.InvariantCultureIgnoreCase))
+            .AsNoTracking()
             .ToListAsync(cancellationToken);
 
         return results;
